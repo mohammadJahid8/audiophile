@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;800&family=Roboto:wght@300;400;500;700&family=Square+Peg&family=Ubuntu:wght@400;700&display=swap');
+
 /* custom scroll bar */
 body {
   scroll-behavior: smooth;
+  font-family: 'Manrope', sans-serif;
+  background-color: #fafafa;
 }
 
 ::-webkit-scrollbar {
