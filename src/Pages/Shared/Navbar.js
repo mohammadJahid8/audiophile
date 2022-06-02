@@ -1,3 +1,5 @@
+import { faHeadphonesSimple } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
@@ -28,9 +30,9 @@ const Navbar = () => {
   return (
     <div
       className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-white font-bold'}
-      // className='bg-black fixed right-0 left-0 font-bold '
+    // className='bg-black fixed right-0 left-0 font-bold '
     >
-      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  uppercase">
+      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  ">
         <div class="flex items-center justify-between">
           <a
             href="/"
@@ -38,26 +40,12 @@ const Navbar = () => {
             title="Company"
             class="inline-flex items-center"
           >
-            <svg
-              class="w-8 text-deep-purple-accent-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg>
-            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+            <FontAwesomeIcon icon={faHeadphonesSimple} className=" h-10" />
+            <span class="ml-2 text-2xl tracking-wide font-extrabold">
+              audiophile
             </span>
           </a>
-          <ul class=" items-center hidden space-x-6 lg:flex ">
+          <ul class=" items-center hidden space-x-6 lg:flex uppercase">
             <li className="">
               <NavLink
 
@@ -183,55 +171,58 @@ const Navbar = () => {
                   </div>
                   <nav>
                     <ul class="space-y-4">
-                      <li>
+                      <li className="">
                         <NavLink
-                          to="/"
-                          aria-label="Our product"
+
+                          to="/home"
                           title="Our product"
-                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({ isActive }) => (isActive ? "active-link" : "link")}
                         >
-                          Product
+                          Home
                         </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
+                        <NavLink
+                          to="/portfolio"
                           title="Our product"
-                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({ isActive }) => (isActive ? "active-link" : "link")}
                         >
-                          Features
-                        </a>
+                          Our Portfolio
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <NavLink
+                          to="/team"
                           aria-label="Product pricing"
                           title="Product pricing"
-                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({ isActive }) => (isActive ? "active-link" : "link")}
                         >
-                          Pricing
-                        </a>
+                          Our Team
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <NavLink
+                          to="/contact"
                           aria-label="About us"
                           title="About us"
-                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({ isActive }) => (isActive ? "active-link" : "link")}
                         >
-                          About us
-                        </a>
+                          Contact us
+                        </NavLink>
                       </li>
-                      <li>
-                        <a
-                          href="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6  tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
+                      <li className="">
+                        <NavLink
+                          to="/contacts"
+                          aria-label="About us"
+                          title="About us"
+                          // class=" tracking-wide text-gray-700 transition-colors duration-200 "
+                          className={({ isActive }) => (isActive ? "active-link" : "link")}
                         >
-                          Sign up
-                        </a>
+                          Login
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>
