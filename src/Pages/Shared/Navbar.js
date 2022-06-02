@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
 const Navbar = () => {
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinkStyles = ({ isActive }) => {
@@ -11,12 +13,22 @@ const Navbar = () => {
       textDecoration: isActive ? 'underline' : 'none',
     }
   }
+
+  //change navbar color while scrolling
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  }
+  window.addEventListener('scroll', changeColor);
+
   return (
-    <div>
-
-
-      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div class="relative flex items-center justify-between">
+    <div className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-white font-bold'}>
+      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  uppercase">
+        <div class="flex items-center justify-between">
           <a
             href="/"
             aria-label="Company"
@@ -42,13 +54,13 @@ const Navbar = () => {
               Company
             </span>
           </a>
-          <ul class=" items-center hidden space-x-8 lg:flex font-medium">
+          <ul class=" items-center hidden space-x-6 lg:flex ">
             <li className="">
               <NavLink
                 style={navLinkStyles}
                 to="/home"
                 title="Our product"
-                class="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                class=" tracking-wide text-gray-700 transition-colors duration-200"
               >
                 Home
               </NavLink>
@@ -57,7 +69,7 @@ const Navbar = () => {
               <NavLink
                 to="/portfolio"
                 title="Our product"
-                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
                 Our Portfolio
               </NavLink>
@@ -67,7 +79,7 @@ const Navbar = () => {
                 to="/team"
                 aria-label="Product pricing"
                 title="Product pricing"
-                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
                 Our Team
               </NavLink>
@@ -77,7 +89,7 @@ const Navbar = () => {
                 to="/contact"
                 aria-label="About us"
                 title="About us"
-                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
                 Contact us
               </NavLink>
@@ -87,7 +99,7 @@ const Navbar = () => {
                 to="/contacts"
                 aria-label="About us"
                 title="About us"
-                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 bg-black "
+                class=" tracking-wide text-gray-700 transition-colors duration-200 "
               >
                 Login
               </NavLink>
@@ -169,7 +181,7 @@ const Navbar = () => {
                           to="/"
                           aria-label="Our product"
                           title="Our product"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Product
                         </NavLink>
@@ -179,7 +191,7 @@ const Navbar = () => {
                           href="/"
                           aria-label="Our product"
                           title="Our product"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Features
                         </a>
@@ -189,7 +201,7 @@ const Navbar = () => {
                           href="/"
                           aria-label="Product pricing"
                           title="Product pricing"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Pricing
                         </a>
@@ -199,7 +211,7 @@ const Navbar = () => {
                           href="/"
                           aria-label="About us"
                           title="About us"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           About us
                         </a>
@@ -207,7 +219,7 @@ const Navbar = () => {
                       <li>
                         <a
                           href="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                          class="inline-flex items-center justify-center w-full h-12 px-6  tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                           aria-label="Sign up"
                           title="Sign up"
                         >
