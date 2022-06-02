@@ -6,17 +6,16 @@ const Banner = () => {
         <div>
             <div
                 style={{ backgroundImage: `url(${banner})` }}
-                className=" h-screen">
+                className=" h-full">
 
                 <div className="">
-                    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-64">
+                    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-24 lg:py-60">
                         <div className="flex flex-col items-center justify-between xl:flex-row">
                             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-                                <p className='text-gray-100'>new product</p>
-                                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                                    The quick, brown fox <br className="hidden md:block" />
-                                    jumps over a{' '}
-                                    <span className="text-teal-accent-400">lazy dog</span>
+                                <p className='text-gray-400 tracking-[.6rem] uppercase text-base pb-5'>new product</p>
+                                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-wide text-white sm:text-6xl sm:leading-none uppercase ">
+                                    XX99 mark II  <br className="hidden md:block" />
+                                    headphones
                                 </h2>
                                 <p className="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem
