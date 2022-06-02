@@ -27,7 +27,7 @@ const Navbar = () => {
   // className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-white font-bold'}
   return (
     <div
-      className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-orange-400 font-bold'}
+      className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-white font-bold'}
       // className='bg-black fixed right-0 left-0 font-bold '
     >
       <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  uppercase">

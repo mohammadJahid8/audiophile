@@ -17,17 +17,17 @@ const Banner = () => {
                                     XX99 mark II  <br className="hidden md:block" />
                                     headphones
                                 </h2>
-                                <p className="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
+                                <p className="max-w-xl my-8 text-base text-gray-400 md:text-lg">
                                     Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
                                 </p>
                                 <a
                                     href="/"
                                     aria-label=""
-                                    className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                                    className="btn bg-[#d87d4a] pb-8 pt-5 px-7 rounded-none"
                                 >
                                     Learn more
                                     <svg
-                                        className="inline-block w-3 ml-2"
+                                        className="inline-block w-3 ml-1"
                                         fill="currentColor"
                                         viewBox="0 0 12 12"
                                     >
