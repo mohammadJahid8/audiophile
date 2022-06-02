@@ -2,3 +2,30 @@
     background-color: #f8f8f8;
     transition: all 0.5s ease;
 }
+
+.link {
+    text-decoration: none;
+    /* margin-left: 15px; */
+    /* font-size: 20px; */
+    color: #1e90c2;
+    transition: color ease-in-out 300ms;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.active-link::before {
+    /* font-family: 'Open Sans', sans-serif; */
+    text-decoration: none;
+    /* margin-left: 15px; */
+    /* font-size: 20px; */
+    transition: color ease-in-out 300ms;
+    /* color: #1b4388; */
+    content: " ";
+    position: absolute;
+    /* left: 0; */
+    bottom: 20px;
+    /* bottom: 0; */
+    background-color: orange;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}

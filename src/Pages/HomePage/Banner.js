@@ -18,9 +18,7 @@ const Banner = () => {
                                     headphones
                                 </h2>
                                 <p className="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                                    quae.
+                                    Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
                                 </p>
                                 <a
                                     href="/"
