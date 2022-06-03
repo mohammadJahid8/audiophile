@@ -6,7 +6,7 @@ const Banner = () => {
         <div>
             <div
                 style={{ backgroundImage: `url(${banner})` }}
-                className=" h-full">
+                className="h-full bg-no-repeat">
 
                 <div className="">
                     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-24 lg:py-60">

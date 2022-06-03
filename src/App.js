@@ -10,7 +10,7 @@ import NotFound from "./Pages/Shared/NotFound";
 
 function App() {
   return (
-    <div>
+    <div className='max-w-[90rem] mx-auto'>
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home/>}/>
