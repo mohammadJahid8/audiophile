@@ -15,8 +15,7 @@
 .active-link::before {
     /* font-family: 'Open Sans', sans-serif; */
     text-decoration: none;
-    /* margin-left: 15px; */
-    /* font-size: 20px; */
+
     transition: color ease-in-out 300ms;
     /* color: #1b4388; */
     content: " ";

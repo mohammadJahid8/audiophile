@@ -11,7 +11,7 @@ import NotFound from "./Pages/Shared/NotFound";
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>

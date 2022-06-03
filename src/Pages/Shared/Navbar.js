@@ -4,17 +4,69 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
-const Navbar = () => {
-
-
+const Navbar = ({ backgroundHome }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const navLinkStyles = ({ isActive }) => {
-  //   return {
-  //     color: isActive ? 'red' : 'blue',
-  //     textDecoration: isActive ? 'underline' : 'none',
-  //   }
-  // }
+
+  //
+  const menuItems = (
+    <>
+      <li className="">
+        <NavLink
+
+          to="/home"
+          title="Our product"
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/portfolio"
+          title="Our product"
+          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          Our Portfolio
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/team"
+          aria-label="Product pricing"
+          title="Product pricing"
+          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          Our Team
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          aria-label="About us"
+          title="About us"
+          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          Contact us
+        </NavLink>
+      </li>
+      <li className="">
+        <NavLink
+          to="/contact"
+          aria-label="About us"
+          title="About us"
+          // class=" tracking-wide text-gray-700 transition-colors duration-200 "
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
+        >
+          Login
+        </NavLink>
+      </li>
+    </>
+  )
+
 
   //change navbar color while scrolling
   const [color, setColor] = useState(false);
@@ -26,10 +78,10 @@ const Navbar = () => {
     }
   }
   window.addEventListener('scroll', changeColor);
-  // className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-white font-bold'}
+
   return (
     <div
-      className={color ? 'nav-bg fixed right-0 left-0 font-bold' : 'bg-transparent fixed  right-0 left-0 text-white font-bold'}
+      className={color ? 'nav-bg sticky top-0  font-bold' : `${backgroundHome} sticky top-0    font-bold`}
     // className='bg-black fixed right-0 left-0 font-bold '
     >
       <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  ">
@@ -46,61 +98,9 @@ const Navbar = () => {
             </span>
           </a>
           <ul class=" items-center hidden space-x-6 lg:flex uppercase">
-            <li className="">
-              <NavLink
-
-                to="/home"
-                title="Our product"
-                className={({ isActive }) => (isActive ? "active-link" : "link")}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/portfolio"
-                title="Our product"
-                // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                className={({ isActive }) => (isActive ? "active-link" : "link")}
-              >
-                Our Portfolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/team"
-                aria-label="Product pricing"
-                title="Product pricing"
-                // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                className={({ isActive }) => (isActive ? "active-link" : "link")}
-              >
-                Our Team
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                aria-label="About us"
-                title="About us"
-                // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                className={({ isActive }) => (isActive ? "active-link" : "link")}
-              >
-                Contact us
-              </NavLink>
-            </li>
-            <li className="">
-              <NavLink
-                to="/contacts"
-                aria-label="About us"
-                title="About us"
-                // class=" tracking-wide text-gray-700 transition-colors duration-200 "
-                className={({ isActive }) => (isActive ? "active-link" : "link")}
-              >
-                Login
-              </NavLink>
-            </li>
+            {menuItems}
           </ul>
-          <div class="lg:hidden">
+          <div class="lg:hidden text-black">
             <button
               aria-label="Open Menu"
               title="Open Menu"
@@ -171,59 +171,7 @@ const Navbar = () => {
                   </div>
                   <nav>
                     <ul class="space-y-4">
-                      <li className="">
-                        <NavLink
-
-                          to="/home"
-                          title="Our product"
-                          className={({ isActive }) => (isActive ? "active-link" : "link")}
-                        >
-                          Home
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/portfolio"
-                          title="Our product"
-                          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          className={({ isActive }) => (isActive ? "active-link" : "link")}
-                        >
-                          Our Portfolio
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/team"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          className={({ isActive }) => (isActive ? "active-link" : "link")}
-                        >
-                          Our Team
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/contact"
-                          aria-label="About us"
-                          title="About us"
-                          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          className={({ isActive }) => (isActive ? "active-link" : "link")}
-                        >
-                          Contact us
-                        </NavLink>
-                      </li>
-                      <li className="">
-                        <NavLink
-                          to="/contacts"
-                          aria-label="About us"
-                          title="About us"
-                          // class=" tracking-wide text-gray-700 transition-colors duration-200 "
-                          className={({ isActive }) => (isActive ? "active-link" : "link")}
-                        >
-                          Login
-                        </NavLink>
-                      </li>
+                      {menuItems}
                     </ul>
                   </nav>
                 </div>

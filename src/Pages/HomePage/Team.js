@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from '../Shared/Navbar';
 
 const Team = () => {
     return (
-        <div>
-            <h2>our team</h2>
-        </div>
+        <>
+            <Navbar backgroundHome="bg-white" />
+            <div>
+                <h2>our team</h2>
+            </div>
+        </>
     );
 };
 
