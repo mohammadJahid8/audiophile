@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <Navbar backgroundHome="bg-[#191919] text-white" />
             <Banner />
-            <div className='container mx-auto px-16'>
+            <div className='container mx-auto px-16 my-44'>
                 <Shop />
                 <SeeProduct />
                 <SeeProduct1 />

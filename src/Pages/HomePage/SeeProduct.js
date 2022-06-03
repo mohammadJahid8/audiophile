@@ -7,7 +7,7 @@ const SeeProduct = () => {
     return (
         <div
             style={{ backgroundImage: `url(${circle})` }}
-            className="bg-[#d87d4a] mb-96 bg-no-repeat pt-24  text-white bg-circle">
+            className="bg-[#d87d4a] mb-12 bg-no-repeat pt-24  text-white bg-circle">
 
             {/* <div className> */}
             <div className="flex px-20 lg:gap-44 gap-6 pb-6 lg:pb-0 justify-center items-center flex-col lg:flex-row">
