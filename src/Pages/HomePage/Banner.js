@@ -23,7 +23,7 @@ const Banner = () => {
                                 <a
                                     href="/"
                                     aria-label=""
-                                    className="btn bg-[#d87d4a] pb-8 pt-5 px-7 rounded-none"
+                                    className="btn bg-[#d87d4a] pb-8 pt-5 px-7 rounded-none border-none"
                                 >
                                     Learn more
                                     <svg

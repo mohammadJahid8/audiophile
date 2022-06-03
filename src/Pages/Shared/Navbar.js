@@ -9,6 +9,11 @@ const Navbar = ({ backgroundHome }) => {
 
 
   //
+  const activeStyle = {
+    color: "#d87d4a",
+    borderBottom: "2px solid #d87d4a"
+  }
+
   const menuItems = (
     <>
       <li className="">
@@ -16,7 +21,8 @@ const Navbar = ({ backgroundHome }) => {
 
           to="/home"
           title="Our product"
-          className={({ isActive }) => (isActive ? "active-link" : "link")}
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+
         >
           Home
         </NavLink>
@@ -25,8 +31,8 @@ const Navbar = ({ backgroundHome }) => {
         <NavLink
           to="/portfolio"
           title="Our product"
-          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-          className={({ isActive }) => (isActive ? "active-link" : "link")}
+
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Our Portfolio
         </NavLink>
@@ -36,8 +42,7 @@ const Navbar = ({ backgroundHome }) => {
           to="/team"
           aria-label="Product pricing"
           title="Product pricing"
-          // class=" tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-          className={({ isActive }) => (isActive ? "active-link" : "link")}
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Our Team
         </NavLink>
