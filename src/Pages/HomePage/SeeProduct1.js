@@ -7,7 +7,7 @@ const SeeProduct1 = () => {
             <div className="mb-8 uppercase ">
                 <div
                     style={{ backgroundImage: `url(${speaker})` }}
-                    className="h-[20rem] bg-no-repeat bg-cover flex justify-start items-center">
+                    className="h-[20rem] bg-no-repeat bg-cover bg-center flex justify-start items-center">
                     <div className='pl-28'>
                         <h2 className='tracking-wider text-3xl pb-6 font-bold'>ZX7 speaker</h2>
                         <a

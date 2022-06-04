@@ -1,13 +1,13 @@
 import React from 'react';
 import banner from '../../images/home/image-hero.jpg'
+import bannerMobile from '../../images/home/mobile/image-header.jpg'
 
 const Banner = () => {
     return (
         <div>
             <div
                 style={{ backgroundImage: `url(${banner})` }}
-                className="h-full bg-no-repeat">
-
+                className="h-full bg-no-repeat bg-cover bg-center">
                 <div className="">
                     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-24 lg:py-60">
                         <div className="flex flex-col items-center justify-between xl:flex-row">
