@@ -10,18 +10,22 @@ import NotFound from "./Pages/Shared/NotFound";
 
 function App() {
   return (
-    <div className='max-w-[90rem] mx-auto'>
-      {/* <Navbar /> */}
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/footer" element={<Footer />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/notFound" element={<NotFound />} />
-      </Routes>
-    </div>
+    <>
+
+      <div className='max-w-[90rem] mx-auto'>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/footer" element={<Footer />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/notFound" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
+    </>
   );
 }
 
