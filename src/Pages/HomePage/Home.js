@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar';
 import Banner from './Banner';
+import BottomHero from './BottomHero';
 import SeeProduct from './SeeProduct';
 import SeeProduct1 from './SeeProduct1';
 import SeeProduct2 from './SeeProduct2';
@@ -16,6 +17,7 @@ const Home = () => {
                 <SeeProduct />
                 <SeeProduct1 />
                 <SeeProduct2 />
+                <BottomHero />
 
             </div>
         </div>
